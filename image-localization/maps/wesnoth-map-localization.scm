@@ -55,6 +55,7 @@
             (blacklabels1 0)
             (blacklabels2 0)
             (blacklabels3 0)
+            (blacklabelsopaquepixels 0)
             (yellowlabels1 0)
             (yellowlabels2 0)
             (yellowlabels3 0)
@@ -166,6 +167,8 @@
         (set! overlay (car (gimp-image-merge-down img labellessmap CLIP-TO-IMAGE) ) )
         
         ; black labels first
+        (set! blacklabelsopaquepixels (car (gimp-layer-copy blacklabels1 FALSE) ) )
+        
         (gimp-image-raise-item-to-top img blacklabels1 )
         (set! blacklabels1 (car (pencil-effect img blacklabels1 1 20) ) )
         
@@ -174,19 +177,24 @@
         (gimp-item-set-name blacklabels1 "black labels")
         (gimp-item-set-name blacklabels2 "black labels 2")
         (gimp-item-set-name blacklabels3 "black labels 3")
+        (gimp-item-set-name blacklabelsopaquepixels "black labels opaque pixels")
         (gimp-layer-set-mode blacklabels1 OVERLAY-MODE)
         (gimp-layer-set-mode blacklabels2 OVERLAY-MODE)
         (gimp-layer-set-mode blacklabels3 OVERLAY-MODE)
         (gimp-image-insert-layer img blacklabels2 0 -1)
         (gimp-image-insert-layer img blacklabels3 0 -1)
+        (gimp-image-insert-layer img blacklabelsopaquepixels 0 -1)
+        (plug-in-threshold-alpha RUN-NONINTERACTIVE img blacklabelsopaquepixels 254)
         
         (gimp-image-raise-item-to-top img overlay)
         (gimp-image-raise-item-to-top img blacklabels1)
         (gimp-image-raise-item-to-top img blacklabels2)
         (gimp-image-raise-item-to-top img blacklabels3)
+        (gimp-image-raise-item-to-top img blacklabelsopaquepixels)
         (gimp-image-merge-down img blacklabels1 CLIP-TO-IMAGE)
         (gimp-image-merge-down img blacklabels2 CLIP-TO-IMAGE)
-        (set! overlay (car (gimp-image-merge-down img blacklabels3 CLIP-TO-IMAGE) ) )
+        (gimp-image-merge-down img blacklabels3 CLIP-TO-IMAGE)
+        (set! overlay (car (gimp-image-merge-down img blacklabelsopaquepixels CLIP-TO-IMAGE) ) )
         
         ; yellow labels next
         (set! yellowlabels3 (car (gimp-layer-copy yellowlabels1 FALSE) ) )
