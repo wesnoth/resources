@@ -48,6 +48,13 @@
 )
 
 (define (wesnoth-localize-map orig_img)
+    (if (= TRUE (car (gimp-item-is-group (car (gimp-image-get-layer-by-name orig_img "labels") ) ) ) )
+        (begin
+            (error "Labels must be on a single normal layer! Use the \"Merge Layer Group\" action before running the script.")
+            (quit)
+        )
+    )
+    
     (let*
         (
             (img (car (gimp-image-duplicate orig_img) ) )
@@ -140,16 +147,29 @@
         (gimp-context-set-sample-transparent FALSE)
         (gimp-context-set-sample-threshold-int 32)
         (gimp-image-select-color img CHANNEL-OP-REPLACE yellowlabels1 '(185 155 85) )
-        (gimp-selection-grow img 3)
-        (gimp-edit-clear blacklabels1)
-        (gimp-selection-invert img)
-        (gimp-edit-clear yellowlabels1)
+        
+        ; we musn't do the following if the selection is empty (if there are no yellow labels)
+        (if (= FALSE (car (gimp-selection-is-empty img) ) )
+            (begin
+                (gimp-selection-grow img 3)
+                (gimp-edit-clear blacklabels1)
+                (gimp-selection-invert img)
+                (gimp-edit-clear yellowlabels1)
+            )
+        )
+        
         (gimp-context-set-sample-threshold-int 16)
         (gimp-image-select-color img CHANNEL-OP-REPLACE blacklabels1 '(0 0 0) )
-        (gimp-selection-grow img 4)
-        (gimp-edit-clear yellowlabels1)
-        (gimp-selection-invert img)
-        (gimp-edit-clear blacklabels1)
+        
+        ; we musn't do the following if the selection is empty (if there are no black labels)
+        (if (= FALSE (car (gimp-selection-is-empty img) ) )
+            (begin
+                (gimp-selection-grow img 4)
+                (gimp-edit-clear yellowlabels1)
+                (gimp-selection-invert img)
+                (gimp-edit-clear blacklabels1)
+            )
+        )
         
         (gimp-selection-none img)
         
