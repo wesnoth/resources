@@ -1,0 +1,5 @@
+images/
+
+plan.psd (Q_x) - GPL 2.0 and GPL 3.0
+    https://opengameart.org/content/dwarven-map
+	source file provided per GPL v2.0 and later requirements
