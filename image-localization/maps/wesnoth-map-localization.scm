@@ -47,7 +47,7 @@
     )
 )
 
-(define (wesnoth-localize-map orig_img)
+(define (wesnoth-localize-map-2 orig_img)
     (if (= TRUE (car (gimp-item-is-group (car (gimp-image-get-layer-by-name orig_img "labels") ) ) ) )
         (begin
             (error "Labels must be on a single normal layer! Use the \"Merge Layer Group\" action before running the script.")
@@ -172,7 +172,7 @@
         )
         
         (gimp-selection-none img)
-        
+        (gimp-message "uno")
         ; create the underlay for black labels
         (gimp-image-raise-item-to-top img overlay )
         (gimp-image-raise-item-to-top img labellessmap )
@@ -190,7 +190,7 @@
         (set! blacklabelsopaquepixels (car (gimp-layer-copy blacklabels1 FALSE) ) )
         
         (gimp-image-raise-item-to-top img blacklabels1 )
-        (set! blacklabels1 (car (pencil-effect img blacklabels1 1 20) ) )
+        (set! blacklabels1 (car (pencil-effect img blacklabels1 2 20) ) )
         
         (set! blacklabels2 (car (gimp-layer-copy blacklabels1 FALSE) ) )
         (set! blacklabels3 (car (gimp-layer-copy blacklabels1 FALSE) ) )
@@ -276,14 +276,14 @@
 )
 
 (script-fu-register
-    "wesnoth-localize-map"
-    "Map Localization"
+    "wesnoth-localize-map-2"
+    "Map Localization - v2"
     "Creates a localized label overlay"
-    "zookeeper"
+    "zookeeper & Antro"
     "public domain"
     ""
     "RGBA"
     SF-IMAGE    "Image"    0
 )
 
-(script-fu-menu-register "wesnoth-localize-map" "<Image>/Filters/Wesnoth")
+(script-fu-menu-register "wesnoth-localize-map-2" "<Image>/Filters/Wesnoth")
