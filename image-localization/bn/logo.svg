@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg2"
+   width="1173.3333"
+   height="268"
+   viewBox="0 0 1173.3333 268"
+   sodipodi:docname="bfw-logo.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   inkscape:export-filename="bfw-logo2.png"
+   inkscape:export-xdpi="81.818184"
+   inkscape:export-ydpi="81.818184"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs6">
+    <filter
+       inkscape:label="Drop Shadow"
+       inkscape:menu="Bevels"
+       inkscape:menu-tooltip="Glowing metal texture"
+       style="color-interpolation-filters:sRGB;"
+       id="filter303"
+       x="-0.047070253"
+       y="-0.40694874"
+       width="1.1022194"
+       height="1.8837437">
+      <feColorMatrix
+         result="result2"
+         type="luminanceToAlpha"
+         in="SourceGraphic"
+         id="feColorMatrix293" />
+      <feDiffuseLighting
+         lighting-color="#ffffff"
+         in="result2"
+         diffuseConstant="0.5"
+         result="result1"
+         surfaceScale="15"
+         id="feDiffuseLighting297">
+        <feDistantLight
+           azimuth="225"
+           elevation="10"
+           id="feDistantLight295" />
+      </feDiffuseLighting>
+      <feComposite
+         result="result9"
+         operator="arithmetic"
+         k2="1"
+         k3="0.8"
+         in2="SourceGraphic"
+         id="feComposite299" />
+      <feComposite
+         in2="SourceGraphic"
+         result="fbSourceGraphic"
+         operator="in"
+         in="result9"
+         id="feComposite301" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix15867" />
+      <feGaussianBlur
+         id="feGaussianBlur15869"
+         stdDeviation="3"
+         result="result10"
+         in="fbSourceGraphic" />
+      <feBlend
+         in2="fbSourceGraphic"
+         id="feBlend15871"
+         result="result5"
+         mode="multiply"
+         in="result10" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite15873"
+         in="result5"
+         result="fbSourceGraphic"
+         operator="over" />
+      <feGaussianBlur
+         id="feGaussianBlur15875"
+         result="result9"
+         stdDeviation="5" />
+      <feSpecularLighting
+         id="feSpecularLighting15877"
+         in="result9"
+         result="result1"
+         lighting-color="rgb(255,255,255)"
+         surfaceScale="1"
+         specularConstant="2.2"
+         specularExponent="45">
+        <fePointLight
+           id="fePointLight15879"
+           x="-5000"
+           y="-10000"
+           z="20000" />
+      </feSpecularLighting>
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite15881"
+         in="result1"
+         result="result2"
+         operator="in" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite15883"
+         in="result2"
+         result="result4"
+         operator="arithmetic"
+         k2="2"
+         k3="0.8" />
+      <feBlend
+         in2="result4"
+         id="feBlend15885"
+         in="result4"
+         mode="multiply"
+         result="fbSourceGraphic" />
+      <feColorMatrix
+         result="fbSourceGraphicAlpha"
+         in="fbSourceGraphic"
+         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
+         id="feColorMatrix2987" />
+      <feFlood
+         id="feFlood2989"
+         flood-opacity="0.498039"
+         flood-color="rgb(0,0,0)"
+         result="flood"
+         in="fbSourceGraphic" />
+      <feComposite
+         in2="fbSourceGraphic"
+         id="feComposite2991"
+         in="flood"
+         operator="in"
+         result="composite1" />
+      <feGaussianBlur
+         id="feGaussianBlur2993"
+         in="composite1"
+         stdDeviation="6"
+         result="blur" />
+      <feOffset
+         id="feOffset2995"
+         dx="6"
+         dy="6"
+         result="offset" />
+      <feComposite
+         in2="offset"
+         id="feComposite2997"
+         in="fbSourceGraphic"
+         operator="over"
+         result="composite2" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="namedview4"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.62556823"
+     inkscape:cx="525.92185"
+     inkscape:cy="136.67574"
+     inkscape:window-width="1366"
+     inkscape:window-height="736"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <g
+     inkscape:groupmode="layer"
+     inkscape:label="Image"
+     id="g8"
+     transform="matrix(0.85227279,0,0,0.85227279,86.666626,19.795447)"
+     style="display:none">
+    <image
+       width="1173.3333"
+       height="268"
+       preserveAspectRatio="none"
+       style="image-rendering:optimizeQuality"
+       xlink:href="bfw-logo.png"
+       id="image10" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Image 1"
+     transform="matrix(0.85227279,0,0,0.85227279,86.666626,19.795447)"
+     style="display:none">
+    <text
+       xml:space="preserve"
+       style="font-size:53.3333px;line-height:1.25;font-family:sans-serif"
+       x="245.88905"
+       y="117.23166"
+       id="text393"><tspan
+         sodipodi:role="line"
+         id="tspan391"
+         x="245.88905"
+         y="117.23166" /></text>
+  </g>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:86.9203px;line-height:1.25;font-family:'Ekushey Bangla Kolom';-inkscape-font-specification:'Ekushey Bangla Kolom Bold';letter-spacing:4.5271px;fill:#fff8d3;fill-opacity:1;stroke:#b6b17d;stroke-width:2.71626;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter303)"
+     x="269.33475"
+     y="153.87042"
+     id="text393-0"
+     transform="matrix(0.67285987,0,0,0.7867151,184.20187,54.70042)"><tspan
+       sodipodi:role="line"
+       id="tspan391-6"
+       x="269.33475"
+       y="153.87042"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:86.9203px;font-family:'Lohit Bengali';-inkscape-font-specification:'Lohit Bengali Bold';fill:#fff8d3;fill-opacity:1;stroke:#b6b17d;stroke-width:2.71626;stroke-dasharray:none;stroke-opacity:1">ব্যাটল ফর ওয়েসনথ</tspan></text>
+</svg>
