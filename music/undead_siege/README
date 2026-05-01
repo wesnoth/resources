@@ -1,0 +1,12 @@
+
+Undead Siege project files
+
+Originally exported using MuseScore 4.6.5.
+Requires the following MuseSounds packs:
+    - Muse Strings
+    - Muse Brass
+    - Muse Choir
+    - Muse Percussion
+
+The makefile guarantees repeatable exports, including loudness tweaks and consistent ogg format. 
+Additionally it exports a full score PDF.
